@@ -4,4 +4,4 @@ COPY . ./dotnet_app
 WORKDIR /dotnet_app/src/DotNetCoreHelloFromAppSettings
 RUN dotnet build DotNetCoreHelloFromAppSettings.csproj
 
-ENTRYPOINT ["dotnet", "/dotnet_app/src/DotNetCoreHelloFromAppSettings/bin/Debug/netcoreapp5.0/DotNetCoreHelloFromAppSettings.dll"]
+ENTRYPOINT ["/dotnet_app/docker-entrypoint.sh"]
